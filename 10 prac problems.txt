@@ -1,0 +1,271 @@
+1) Reverse a number
+import java.util.*;
+
+class Reverse
+  {
+    void num()
+    {
+      System.out.println("Enter the number to reverse : ");
+      Scanner sc= new Scanner(System.in);
+      int no= sc.nextInt();
+      int r=0;
+      while(no!=0)
+        {
+          int remainder=no%10;
+          r=r*10+remainder;
+          no=no/10;
+        }
+      System.out.println("The reverse number is : "+r);
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    Reverse NUM= new Reverse();
+    NUM.num();
+  }
+}
+
+2) Factorial of number
+import java.util.*;
+
+class Fact
+  {
+   void number()
+    {
+      System.out.println("Enter the number to find its factorial : ");
+      Scanner sc=new Scanner(System.in);
+      int n= sc.nextInt();
+      int f=1;
+      for(int i=1;i<=n;i++)
+        {
+          f=f*i;
+        }
+      System.out.println("The factorial of "+n+" is : "+f);
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    Fact num= new Fact();
+    num.number();
+  }
+}
+
+3) Even odd number
+import java.util.*;
+
+class Number
+  {
+    void even_odd()
+    {
+      System.out.println("Enter the number to check if its an odd number or an even number : ");
+      Scanner sc= new Scanner(System.in);
+      int n= sc.nextInt();
+          if(n%2==0)
+          {
+            System.out.println(n+" is an even number.");
+          }
+          else{
+            System.out.println(n+" is an odd number.");
+          }        
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    Number num= new Number();
+    num.even_odd();
+  }
+}
+
+4) Prime number
+import java.util.*;
+
+class Prime
+  { 
+    void num(int a)
+    { 
+      int b=0;
+      for(int i=2;i<=(a/2);i++)
+        {
+          if(a%i==0)
+          {
+            b++;
+          }
+        }
+      if(b>0)
+      {
+        System.out.println(a+" is a not prime number");
+      }
+      else{
+      System.out.println(a+" is a prime number");
+        }
+  }
+  }
+class Main {
+  public static void main(String[] args) {
+    Prime n= new Prime();
+    System.out.println("Enter the number to check whether it is prime or not: ");
+    Scanner sc=new Scanner(System.in);
+    int x= sc.nextInt();
+    n.num(x);
+  }
+}
+ 
+5) Array
+class Array
+  {
+    void arr()
+    {
+      int a[]={1,2,3,4,5};
+      for(int i=0;i<5;i++)
+        {
+          System.out.println(a[i]);
+        }
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    Array n= new Array();
+    n.arr();
+  }
+}
+
+6) Array in reverse order
+class Array
+  {
+    void arr()
+    {
+      int a[]={1,2,3,4,5};
+      for(int i=4;i<5 && i>=0;i--)
+        {
+          System.out.print(a[i]+" ");
+        }
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    Array n=new Array();
+    n.arr();
+  }
+}
+
+7) Palindrome number
+import java.util.*;
+
+class Palindrome
+  {
+    void number()
+    {
+      System.out.println("Enter the number to chaeck whether it is palindrome or not : ");
+      Scanner sc=new Scanner(System.in);
+      int a= sc.nextInt();
+      int rev=0;
+      int temp=a;
+      while(a!=0)
+        {
+          int remainder=a%10;
+          rev=rev*10+remainder;
+          a=a/10;
+        }
+      if(temp==rev)
+      {
+        System.out.println(temp+" is a palindrome number.");
+      }
+      else{
+        System.out.println(temp+" is not a palindrome number.");
+      }
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    Palindrome num= new Palindrome();
+    num.number();
+  }
+}
+
+8) Palindrome string
+class Palindrome
+  {
+    void String_p()
+    {
+      String a="abcba";
+      int r=0;
+      for(int i=0;i<5;i++)
+        {
+          r=a%10;
+          int rev=rev*10+r;
+          a=a/10;
+        }
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
+
+9) Fibonacci series
+import java.util.*;
+
+class fibonacci
+  {
+    void number()
+    {
+      int n1=0,n2=1,n3;
+      System.out.print("Enter the number to print those many numbers of fibonacci series : ");
+      Scanner sc = new Scanner(System.in);
+      int n= sc.nextInt();
+      System.out.print(n1+" ");
+      System.out.print(n2+" ");
+      for(int i=0;i<n-2;i++)
+        {
+          n3=n2+n1;
+          System.out.print(n3+" ");
+          n1=n2;
+          n2=n3;
+        }
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    fibonacci Num= new fibonacci();
+    Num.number();
+  }
+}
+
+10) GCD of two numbers
+import java.util.*;
+
+class GCD
+  {
+    void number()
+    {
+      System.out.print("Enter the two numbers to find their greatest common divisor : ");
+      Scanner num= new Scanner(System.in);
+      int n1= num.nextInt();
+      int n2= num.nextInt();
+      int gcd=1;
+      for(int i=1;i<=n1 && i<=n2;i++)
+        {
+          if(n1%i==0 && n2%i==0)
+          {
+            gcd=i;
+          }
+        }
+      System.out.println("The Greatest common divisor of "+n1+" & "+n2+" is "+gcd);
+    }
+  }
+
+class Main {
+  public static void main(String[] args) {
+    GCD Number= new GCD();
+    Number.number();
+  }
+}

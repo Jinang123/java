@@ -1,0 +1,169 @@
+import java.util.Scanner;
+class Employee{
+String emp_name;
+int emp_id;
+String emp_add;
+String emp_mail_id;
+String emp_mobile_no;
+double BP, DA, HRA, PF;
+Employee(String emp_name, int emp_id, String emp_add, String emp_mail_id, String emp_mobile_no)
+{
+this.emp_name = emp_name;
+this.emp_id = emp_id;
+this.emp_add = emp_add;
+this.emp_mail_id = emp_mail_id;
+this.emp_mobile_no = emp_mobile_no;
+}
+}
+class Programmer extends Employee{
+double BP, DA, HRA, PF, Gross_Salary, Net_Salary;
+Programmer(String emp_name, int emp_id, String emp_add, String emp_mail_id, String emp_mobile_no)
+{
+super(emp_name, emp_id, emp_add, emp_mail_id, emp_mobile_no);
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter Basic Salary of employee");
+BP = sc.nextDouble();
+DA = 0.1 * BP;
+HRA = 0.12 * BP;
+PF = 0.001 * BP;
+Gross_Salary = BP + DA +HRA;
+Net_Salary = Gross_Salary - PF;
+}
+void display()
+{
+System.out.println("Programmer:\n");
+System.out.println("Name: " + emp_name);
+System.out.println("ID: " + emp_id);
+System.out.println("ADD: " + emp_add);
+System.out.println("Mail_ID: " + emp_mail_id);
+System.out.println("Mobile No.: " + emp_mobile_no);
+System.out.println("BP: " + BP);
+System.out.println("DA: " + DA);
+System.out.println("HRA: " + HRA);
+System.out.println("PF: " + PF);
+System.out.println("Gross Salary: " + Gross_Salary);
+System.out.println("Net Salary: " + Net_Salary);
+}
+}
+class Assistant_Professor extends Employee{
+double BP, DA, HRA, PF, Gross_Salary, Net_Salary;
+Assistant_Professor(String emp_name, int emp_id, String emp_add, String emp_mail_id, String emp_mobile_no)
+{
+super(emp_name, emp_id, emp_add, emp_mail_id, emp_mobile_no);
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter Basic Salary of employee");
+BP = sc.nextDouble();
+DA = 0.11 * BP;
+HRA = 0.112 * BP;
+PF = 0.002 * BP;
+Gross_Salary = BP + DA +HRA;
+Net_Salary = Gross_Salary - PF;
+}
+void display()
+{
+System.out.println("Assistant_Professor:\n");
+System.out.println("Name: " + emp_name);
+System.out.println("ID: " + emp_id);
+System.out.println("ADD: " + emp_add);
+System.out.println("Mail_ID: " + emp_mail_id);
+System.out.println("Mobile No.: " + emp_mobile_no);
+System.out.println("BP: " + BP);
+System.out.println("DA: " + DA);
+System.out.println("HRA: " + HRA);
+System.out.println("PF: " + PF);
+System.out.println("Gross Salary: " + Gross_Salary);
+System.out.println("Net Salary: " + Net_Salary);
+}
+}
+class Associative_Professor extends Employee{
+double BP, DA, HRA, PF, Gross_Salary, Net_Salary;
+Associative_Professor(String emp_name, int emp_id, String emp_add, String emp_mail_id, String emp_mobile_no)
+{
+super(emp_name, emp_id, emp_add, emp_mail_id, emp_mobile_no);
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter Basic Salary of employee");
+BP = sc.nextDouble();
+DA = 0.12 * BP;
+HRA = 0.13 * BP;
+PF = 0.003 * BP;
+Gross_Salary = BP + DA +HRA;
+Net_Salary = Gross_Salary - PF;
+}
+void display()
+{
+System.out.println("Associative_Professor:\n");
+System.out.println("Name: " + emp_name);
+System.out.println("ID: " + emp_id);
+System.out.println("ADD: " + emp_add);
+System.out.println("Mail_ID: " + emp_mail_id);
+System.out.println("Mobile No.: " + emp_mobile_no);
+System.out.println("BP: " + BP);
+System.out.println("DA: " + DA);
+System.out.println("HRA: " + HRA);
+System.out.println("PF: " + PF);
+System.out.println("Gross Salary: " + Gross_Salary);
+System.out.println("Net Salary: " + Net_Salary);
+}
+}
+class Professor extends Employee{
+double BP, DA, HRA, PF, Gross_Salary, Net_Salary;
+Professor(String emp_name, int emp_id, String emp_add, String emp_mail_id, String emp_mobile_no)
+{
+super(emp_name, emp_id, emp_add, emp_mail_id, emp_mobile_no);
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter Basic Salary of employee");
+BP = sc.nextDouble();
+DA = 0.101 * BP;
+HRA = 0.14 * BP;
+PF = 0.004 * BP;
+Gross_Salary = BP + DA +HRA;
+Net_Salary = Gross_Salary - PF;
+}
+void display()
+{
+System.out.println("Professor:\n");
+System.out.println("Name: " + emp_name);
+System.out.println("ID: " + emp_id);
+System.out.println("ADD: " + emp_add);
+System.out.println("Mail_ID: " + emp_mail_id);
+System.out.println("Mobile No.: " + emp_mobile_no);
+System.out.println("BP: " + BP);
+System.out.println("DA: " + DA);
+System.out.println("HRA: " + HRA);
+System.out.println("PF: " + PF);
+System.out.println("Gross Salary: " + Gross_Salary);
+System.out.println("Net Salary: " + Net_Salary);
+}
+}
+class Main {
+public static void main(String[] args) {
+int choice;
+do{
+System.out.println("Enter your choice");
+System.out.println("1.Programmer \n2.Assistant_Professor \n3.Associative_Professor \n4.Professor \n0.Exit");
+Scanner sc = new Scanner(System.in);
+choice = sc.nextInt();
+switch(choice)
+{
+case 1:
+Programmer obj1 = new Programmer("Raj", 01, "MIDC Colony Pachora", "raj@gmailcom", "1234567890");
+obj1.display();
+break;
+case 2:
+Assistant_Professor obj2 = new Assistant_Professor("Vijay", 02, "Nagpur", "vijay@gmailcom", "7463849275");
+obj2.display();
+break;
+case 3:
+Associative_Professor obj3 = new Associative_Professor("Ram", 03, "Mumbai", "ram@gmailcom", "9378539012");
+obj3.display();
+break;
+case 4:
+Professor obj4 = new Professor("Sham", 04, "Pune", "sham@gmailcom", "7729485083");
+obj4.display();
+break;
+case 5:
+break;
+}
+}while(choice != 0);
+}
+}

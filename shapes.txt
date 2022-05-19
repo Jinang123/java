@@ -1,0 +1,70 @@
+import java.util.*;
+
+abstract class shape {
+abstract void compute_area();
+}
+
+ class triangle extends shape{
+double height,width;
+
+triangle(double height, double width){
+this.height = height;
+this.width = width;
+}
+void compute_area(){
+double area = 0.5*height*width;
+System.out.println("The area of triangle is "+ area);
+}
+}
+
+class rectangle extends shape {
+
+    double height,width;
+
+rectangle(double height, double width){
+this.height = height;
+this.width = width;
+}
+
+void compute_area(){
+double area = height*width;
+System.out.println("The area of rectangle is "+ area);
+}
+
+}
+
+public class Main {
+   
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Choose the figure for which you want to calculate the area : ");
+        System.out.println("1. Triangle");
+        System.out.println("2. Rectangle");
+
+        int figure = sc.nextInt();
+
+        if(figure == 1){
+        System.out.println("Enter the height of the triangle : " );
+        double height = sc.nextDouble();
+        System.out.println("Enter the width of the triangle : " );
+        double width = sc.nextDouble();
+
+        triangle t = new triangle(height,width);
+        t.compute_area();
+        }
+
+        else if(figure == 2)
+        {
+        System.out.println("Enter the height of the rectangle : " );
+        double height = sc.nextDouble();
+        System.out.println("Enter the width of the rectangle : " );
+        double width = sc.nextDouble();
+
+        rectangle r = new rectangle(height,width);
+        r.compute_area();
+        }
+
+    }
+
+}

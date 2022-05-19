@@ -1,0 +1,137 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+class Arithmetic_op{
+   
+    public void add(int a,int b)
+    {
+        int sum=a+b;
+        System.out.println("The addition of two numbers is "+sum);
+    }
+    public void add(float a,float b)
+    {
+        float sum=a+b;
+        System.out.println("The addition of two numbers is "+sum);
+    }
+   
+    public void sub(int a,int b)
+    {
+        int diff=a-b;
+        System.out.println("The subtraction of two numbers is "+diff);
+    }
+    public void sub(float a,float b)
+    {
+        float diff=a-b;
+        System.out.println("The subtraction of two numbers is "+diff);
+    }
+   
+    public void mul(int a,int b)
+    {
+        int pdt=a*b;
+        System.out.println("The multiplication of two numbers is "+pdt);
+    }
+   
+    public void div(int a,int b)
+    {
+        int q=a/b;
+        System.out.println("The division of two numbers is "+q);
+    }
+}
+
+ class Frac_op extends Arithmetic_op
+{
+    public void mul(int a,int b)
+    {
+        int pdt=a*b;
+        System.out.println("The multiplication of two numbers is "+pdt);
+        System.out.println("This is an example of method overriding ");
+    }
+   
+    public void div(int a,int b)
+    {
+        int q=a/b;
+        System.out.println("The division of two numbers is "+q);
+        System.out.println("This is an example of method overriding ");
+    }
+   
+}
+public class Main
+{
+public static void main(String[] args) {
+   
+   Frac_op ob=new Frac_op();
+   Scanner Sc=new Scanner(System.in);
+   while(true)
+   {
+System.out.println("\n\nEnter 1. for Addition ");
+System.out.println("Enter 2. for Addition of decimal numbers");
+System.out.println("Enter 3. for Subtraction ");
+System.out.println("Enter 4. for Subtraction of decimal numbers");
+System.out.println("Enter 5. for multiplication");
+System.out.println("Enter 6. for division");
+System.out.println("Enter 0 to exit ");
+int ch=Sc.nextInt();
+int a,b;
+float c,d;
+switch(ch)
+{
+   case 1:
+       System.out.println("Enter the first number ");
+       a=Sc.nextInt();
+       System.out.println("Enter the second number ");
+       b=Sc.nextInt();
+       ob.add(a,b);
+       break;
+     
+   case 2:
+       System.out.println("Enter the first decimal number ");
+       c=Sc.nextFloat();
+       System.out.println("Enter the second decimal number ");
+       d=Sc.nextFloat();
+       ob.add(c,d);
+       break;
+   
+   case 3:
+       System.out.println("Enter the first number ");
+       a=Sc.nextInt();
+       System.out.println("Enter the second number ");
+       b=Sc.nextInt();
+       ob.sub(a,b);
+       break;  
+       
+   case 4:
+       System.out.println("Enter the first decimal number ");
+       c=Sc.nextFloat();
+       System.out.println("Enter the second decimal number ");
+       d=Sc.nextFloat();
+       ob.sub(c,d);
+       break;  
+       
+   case 5:
+       System.out.println("Enter the first number ");
+       a=Sc.nextInt();
+       System.out.println("Enter the second number ");
+       b=Sc.nextInt();
+       ob.mul(a,b);
+       break;
+       
+   case 6:
+       System.out.println("Enter the first number ");
+       a=Sc.nextInt();
+       System.out.println("Enter the second number ");
+       b=Sc.nextInt();
+       ob.div(a,b);
+       break;
+       
+   case 0:
+       System.out.println("Thank you");
+       return;
+}
+   }
+}
+}

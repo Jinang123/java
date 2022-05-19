@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+class demo{
+  public int a,b,c;
+
+   demo(){
+    a=0;
+    b=0;
+    c=0;
+  }
+   demo(int x, int y){
+    a=x;
+    b=y;
+    c=0;
+  }
+   demo(int x, int y, int w){
+    a=x;
+    b=y;
+    c=w;
+  }
+
+  int add(){
+    int r = a+b+c;
+    return r;
+  }
+}
+
+class Main{
+  public static void main(String args[]){
+    int res =0;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter 1 to add 2 nos.\nEnter 2 to add 3 nos.");
+    int d = sc.nextInt();
+
+    if(d==1){
+      System.out.println("Enter the two numbers: ");
+      int A = sc.nextInt();
+      int B = sc.nextInt();
+      demo d1 = new demo(A,B);
+      res=d1.add();
+    }
+    else if(d==2){
+      System.out.println("Enter the three numbers: ");
+      int A = sc.nextInt();
+      int B = sc.nextInt();
+      int C = sc.nextInt();
+      demo d1 = new demo(A,B,C);
+      res=d1.add();
+    }
+    else{
+      System.out.println("INVALID INPUT");
+    }
+
+    System.out.println("Addition is :" + res);
+  }
+}

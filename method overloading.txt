@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class Main {
+    int s;
+    Main() {
+        System.out.print("Sum is:");
+    }
+
+    Main(int a, int b) {
+        s = a + b;
+    }
+
+    void display() {
+        System.out.print(s);
+    }
+
+    public static void main(String args[]) {
+        int a, b;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter two numbers:");
+        a = sc.nextInt();
+        b = sc.nextInt();
+
+        Main t1 = new Main();
+
+        Main t2 = new Main(a, b);
+        t2.display();
+    }
+}

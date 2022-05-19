@@ -96,5 +96,3 @@ class Complex_Op
 		System.out.println("Answer is:("+this.real+") + ("+this.imag+")i" );	
 	}
 }
-            
-
